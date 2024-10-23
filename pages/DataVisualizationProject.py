@@ -15,7 +15,7 @@ st.header('**Data Visualization Project : Regional Public Transportation System 
 from folium.plugins import MarkerCluster
 import seaborn as sns
 import folium
-from streamlit_folium import st_folium
+from streamlit_folium import folium_static
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -54,7 +54,7 @@ for _, stop in stops_df.iterrows():
         popup=stop['stop_name']
     ).add_to(marker_cluster)
 
-st_folium(map)
+folium_static(map)
 
 
 
@@ -268,7 +268,7 @@ for _, route in metro_routes_df.iterrows():
     for lat, lon in coordinates:
         folium.CircleMarker(location=[lat, lon], radius=3, color=route_color, fill=True).add_to(paris_map)
 
-st_folium(paris_map)
+folium_static(paris_map)
 
 
 
