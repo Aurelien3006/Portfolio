@@ -21,10 +21,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Charging the files
-stops_df = pd.read_csv('IDFM-gtfs/stops.txt')
-trips_df = pd.read_csv('IDFM-gtfs/trips.txt')
-routes_df = pd.read_csv('IDFM-gtfs/routes.txt')
-stop_times_df = pd.read_csv('IDFM-gtfs/stop_times.txt')
+stops_df = pd.read_csv('IDFM-gtfs/stops.txt',low_memory=False)
+trips_df = pd.read_csv('IDFM-gtfs/trips.txt',low_memory=False)
+routes_df = pd.read_csv('IDFM-gtfs/routes.txt',low_memory=False)
+stop_times_df = pd.read_csv('IDFM-gtfs/stop_times.txt',low_memory=False)
 
 st.markdown("""
     <p>
